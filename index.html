@@ -51,20 +51,18 @@
 
     .arrow {
       position: absolute;
-      top: calc(50% - 2px); /* ← 2px 上に移動 */
+      top: calc(50% - 2px); 
       transform: translateY(-50%);
-      font-size: 20px;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.3); /* ← 薄くした */
-      cursor: pointer;
-      z-index: 10;
-      border-radius: 50%;
-      width: 32px;  /* ← 少し小さく */
+      width: 32px;
       height: 32px;
+      background-color: rgba(0, 0, 0, 0.25); 
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
       user-select: none;
+      z-index: 10;
     }
 
     .arrow.left {
@@ -73,6 +71,24 @@
 
     .arrow.right {
       right: -50px;
+    }
+
+    .arrow::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .arrow.left::before {
+      border-width: 8px 12px 8px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    .arrow.right::before {
+      border-width: 8px 0 8px 12px;
+      border-color: transparent transparent transparent white;
     }
 
     .content-section {
@@ -100,9 +116,9 @@
     }
 
     .title {
-      font-size: 24px; /* ← 少し大きく */
+      font-size: 24px;
       font-weight: bold;
-      margin-bottom: 32px; /* ← マージン倍に */
+      margin-bottom: 32px;
     }
 
     .body-text {
@@ -126,8 +142,8 @@
 <body>
 
   <div class="slider-wrapper">
-    <div class="arrow left" onclick="prevSlide()">&#10094;</div>
-    <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    <div class="arrow left" onclick="prevSlide()"></div>
+    <div class="arrow right" onclick="nextSlide()"></div>
     <div class="slider-container">
       <div class="slider" id="mainSlider">
         <div class="slide"><img src="news1.jpg" alt="Slide 1" /></div>
@@ -138,7 +154,6 @@
   </div>
 
   <div class="content-section">
-
     <div class="content-box">
       <div class="text-area">
         <div class="title">A本部とB本部の連携で実現した<br>Scope2目標値達成の事例</div>
@@ -174,7 +189,6 @@
         <img src="column03.jpg" alt="Column 3">
       </div>
     </div>
-
   </div>
 
   <script>
