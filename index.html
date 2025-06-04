@@ -18,7 +18,7 @@
     .slider-wrapper {
       position: relative;
       width: 850px;
-      margin: 30px auto 64px auto; 
+      margin: 30px auto 64px auto;
     }
 
     .slider-container {
@@ -51,16 +51,16 @@
 
     .arrow {
       position: absolute;
-      top: 50%;
+      top: calc(50% - 2px); /* ← 2px 上に移動 */
       transform: translateY(-50%);
-      font-size: 24px;
+      font-size: 20px;
       color: white;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.3); /* ← 薄くした */
       cursor: pointer;
       z-index: 10;
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 32px;  /* ← 少し小さく */
+      height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -85,7 +85,7 @@
       width: 100%;
       height: 180px;
       background-color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 24px; 
+      margin-bottom: 24px;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -100,9 +100,9 @@
     }
 
     .title {
-      font-size: 22px;
+      font-size: 24px; /* ← 少し大きく */
       font-weight: bold;
-      margin-bottom: 16px;
+      margin-bottom: 32px; /* ← マージン倍に */
     }
 
     .body-text {
@@ -137,14 +137,11 @@
     </div>
   </div>
 
-
   <div class="content-section">
-
 
     <div class="content-box">
       <div class="text-area">
-        <div class="title">A本部とB本部の連携で実現した<br>
-            Scope2目標値達成の事例</div>
+        <div class="title">A本部とB本部の連携で実現した<br>Scope2目標値達成の事例</div>
         <div class="body-text">
           A本部とB本部が連携し、再エネ導入と設備効率化を推進。Scope2排出量の大幅削減を達成しました。
         </div>
@@ -154,11 +151,9 @@
       </div>
     </div>
 
-
     <div class="content-box">
       <div class="text-area">
-        <div class="title">プラスチック削減への第一歩<br>
-            包装材の見直しとその効果</div>
+        <div class="title">プラスチック削減への第一歩<br>包装材の見直しとその効果</div>
         <div class="body-text">
           当社では全製品の包装材を再生可能素材へと順次切替中。2025年度には年間20トンのプラスチック削減を達成予定です。
         </div>
@@ -168,11 +163,9 @@
       </div>
     </div>
 
-
     <div class="content-box">
       <div class="text-area">
-        <div class="title">サステナブルな未来を担う人材育成「社員への環境教育プログラム」
-        </div>
+        <div class="title">サステナブルな未来を担う人材育成「社員への環境教育プログラム」</div>
         <div class="body-text">
           全社員を対象とした環境教育を実施。カーボンニュートラル実現に向けた「気づき」と「行動変容」を促進しています。
         </div>
@@ -206,5 +199,3 @@
   </script>
 </body>
 </html>
-
-
